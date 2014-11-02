@@ -1,8 +1,12 @@
+LOCALBASE ?=	/usr/local
+CFLAGS += -Wall -Werror -I${LOCALBASE}/include `MagickWand-config --cflags --cppflags` -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DNO_JASPER 
+LIBS	?=	-L${LOCALBASE}/lib
+LDFLAGS += `MagickWand-config --ldflags --libs` -lm -llcms2 -ljpeg
 
 all: dcraw-m
 
 dcraw-m:
-	${CC} ${CFLAGS} ${LDFLAGS} -o dcraw-m dcraw-m.c
+	${CC} ${CFLAGS} ${LIBS} ${LDFLAGS} -o dcraw-m dcraw-m.c
 
 clean:
 	rm dcraw-m
