@@ -9503,6 +9503,7 @@ int CLASS main (int argc, const char **argv)
     puts(_("-n <num>  Set threshold for wavelet denoising"));
     puts(_("-H [0-9]  Highlight mode (0=clip, 1=unclip, 2=blend, 3+=rebuild)"));
     puts(_("-t [0-7]  Flip image (0=none, 3=180, 5=90CCW, 6=90CW)"));
+    puts(_("-R        Auto flip thumbnail image (use with -e)"));
     puts(_("-o [0-5]  Output colorspace (raw,sRGB,Adobe,Wide,ProPhoto,XYZ)"));
 #ifndef NO_LCMS
     puts(_("-o <file> Apply output ICC profile from file"));
@@ -9550,6 +9551,7 @@ int CLASS main (int argc, const char **argv)
       case 'k':  user_black  = atoi(argv[arg++]);  break;
       case 'S':  user_sat    = atoi(argv[arg++]);  break;
       case 't':  user_flip   = atoi(argv[arg++]);  break;
+      case 'R':  auto_flip   = 1; break; /* Auto Flip */
       case 'q':  user_qual   = atoi(argv[arg++]);  break;
       case 'm':  med_passes  = atoi(argv[arg++]);  break;
       case 'H':  highlight   = atoi(argv[arg++]);  break;

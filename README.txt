@@ -31,3 +31,10 @@ dcraw.c -- Dave Coffin's raw photo decoder
 
    $Revision: 1.467 $
    $Date: 2014/07/03 21:19:24 $
+
+References
+
+WWW: http://www.cybercom.net/~dcoffin/dcraw/
+WWW: https://dx.mehomi.com/autorot.html
+WWW: https://dx.mehomi.com/photohack.html
+
