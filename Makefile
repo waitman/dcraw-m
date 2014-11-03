@@ -1,4 +1,5 @@
 LOCALBASE ?=	/usr/local
+PREFIX	?=	/usr/local
 CFLAGS += -Wall -Werror -I${LOCALBASE}/include `MagickWand-config --cflags --cppflags` -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -DNO_JASPER 
 LIBS	?=	-L${LOCALBASE}/lib
 LDFLAGS += `MagickWand-config --ldflags --libs` -lm -llcms2 -ljpeg
@@ -12,7 +13,7 @@ clean:
 	rm dcraw-m
 
 install:
-	install -m 0755 -g wheel -o root dcraw-m ${LOCALBASE}/bin
+	install -m 0755 -g wheel -o root dcraw-m ${STAGEDIR}${LOCALBASE}/bin
 
 deinstall:
 	rm -f ${LOCALBASE}/bin/dcraw-m
