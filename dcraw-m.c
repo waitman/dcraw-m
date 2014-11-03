@@ -9363,7 +9363,7 @@ void CLASS jpeg_thumb()
 	/* amount of rotation */
 	long degrees = 0;
 	char *s;
-	s = getenv("DCRAW_RTC");
+	s = getenv("DCRAW_RTC"); /* if this is set then we rotate opp dir */
 	if (s!=NULL) {
 		/* we go the other way */
 		switch (flip) {
@@ -9463,7 +9463,7 @@ int CLASS main (int argc, const char **argv)
   int user_qual=-1, user_black=-1, user_sat=-1, user_flip=-1;
   int use_fuji_rotate=1, write_to_stdout=0, read_from_stdin=0;
   const char *sp, *bpfile=0, *dark_frame=0, *write_ext;
-  char opm, opt, *ofname, *cp;
+  char opm, opt, *cp;
   struct utimbuf ut;
 #ifndef NO_LCMS
   const char *cam_profile=0, *out_profile=0;

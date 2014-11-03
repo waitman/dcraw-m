@@ -32,6 +32,13 @@ dcraw.c -- Dave Coffin's raw photo decoder
    $Revision: 1.467 $
    $Date: 2014/07/03 21:19:24 $
 
+Example
+
+# setenv DCRAW_RTC 1
+# dcraw-m -R -e IMG_4700.CR2
+# display IMG_4700.thumb.jpg 
+
+
 References
 
 WWW: http://www.cybercom.net/~dcoffin/dcraw/
