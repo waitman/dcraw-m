@@ -1,0 +1,21 @@
+PREFIX  ?=      /usr
+CFLAGS += -I/usr/include `pkg-config --cflags MagickWand` -DNO_JASPER
+LIBS    ?=      -L/usr/lib
+LDFLAGS += `pkg-config MagickWand --libs` -lm -llcms2 -ljpeg
+INSTALL_CMD ?=  install
+STRIP_CMD ?=    strip
+
+all: dcraw-m
+
+dcraw-m:
+        ${CC} ${CFLAGS} ${LIBS} ${LDFLAGS} -o dcraw-m dcraw-m.c
+
+clean:
+        rm dcraw-m
+
+install:
+        ${INSTALL_CMD} -m 0755 -g root -o root dcraw-m ${PREFIX}/bin
+        ${STRIP_CMD} ${PREFIX}/bin/dcraw-m
+
+deinstall:
+        rm -f ${PREFIX}/bin/dcraw-m

@@ -46,3 +46,7 @@ WWW: http://www.cybercom.net/~dcoffin/dcraw/
 WWW: https://dx.mehomi.com/autorot.html
 WWW: https://dx.mehomi.com/photohack.html
 
+Note
+
+Debian makefile (bmake) is Makefile.debian (uses pkg-config)
+
