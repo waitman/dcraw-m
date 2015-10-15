@@ -1,9 +1,10 @@
+Updated for 9.26 
 
 dcraw.c -- Dave Coffin's raw photo decoder
-  Copyright 1997-2014 by Dave Coffin, dcoffin a cybercom o net
+  Copyright 1997-2015 by Dave Coffin, dcoffin a cybercom o net
 
 	With updates by Waitman Gobble
-	Copyright 2014 <ns@waitman.net>
+	Copyright 2015 <ns@waitman.net>
 	1) add DCRAW_OFFSET env variable to adjust timezone to camera
 	when using -z switch
 	2) add ImageMagick magicwand function to auto-rotate extracted
@@ -29,8 +30,8 @@ dcraw.c -- Dave Coffin's raw photo decoder
    *If you have not modified dcraw.c in any way, a link to my
    homepage qualifies as "full source code".
 
-   $Revision: 1.467 $
-   $Date: 2014/07/03 21:19:24 $
+   $Revision: 1.476 $
+   $Date: 2015/05/25 02:29:14 $
 
 Example
 
